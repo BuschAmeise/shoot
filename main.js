@@ -1,21 +1,16 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feed</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <script defer src="js/main.js"></script>
-</head>
-<body>
-    <header>
-        <h1>Feed</h1>
-        <nav>
-            <a href="index.html">Feed</a>
-        </nav>
-    </header>
-    <main id="feed">
-        <!-- Dynamisch mit JavaScript gefüllt -->
-    </main>
-</body>
-</html>
+document.addEventListener('DOMContentLoaded', () => {
+    const feed = document.getElementById('feed');
+
+    // Beispiel-Feed-Elemente
+    const items = Array.from({ length: 5 }, (_, i) => `Item ${i + 1}`);
+
+    items.forEach((item, index) => {
+        const itemDiv = document.createElement('div');
+        itemDiv.className = 'feed-item';
+        itemDiv.textContent = item;
+        itemDiv.addEventListener('click', () => {
+            window.location.href = `detail.html?id=${index}`;
+        });
+        feed.appendChild(itemDiv);
+    });
+});
