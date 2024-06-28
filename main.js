@@ -1,16 +1,21 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const feed = document.getElementById('feed');
-    
-    // Beispielbilder für den Feed
-    const images = ['bild1.jpg', 'bild2.jpg', 'bild3.jpg']; // Add more as needed
-
-    images.forEach((image, index) => {
-        const imgDiv = document.createElement('div');
-        imgDiv.className = 'feed-item';
-        imgDiv.style.backgroundImage = `url('assets/bilder/${image}')`;
-        imgDiv.addEventListener('click', () => {
-            window.location.href = `detail.html?id=${index}`;
-        });
-        feed.appendChild(imgDiv);
-    });
-});
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feed</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/main.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Feed</h1>
+        <nav>
+            <a href="index.html">Feed</a>
+        </nav>
+    </header>
+    <main id="feed">
+        <!-- Dynamisch mit JavaScript gefüllt -->
+    </main>
+</body>
+</html>
