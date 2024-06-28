@@ -1,21 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Get the image ID from the URL
+    // ID des Elements aus der URL abrufen
     const urlParams = new URLSearchParams(window.location.search);
-    const imageId = urlParams.get('id');
+    const itemId = urlParams.get('id');
 
-    // Create a p5.js sketch
+    // p5.js Sketch erstellen
     const sketch = (p) => {
         p.setup = () => {
             p.createCanvas(400, 400);
             p.background(200);
             p.fill(0);
             p.textSize(32);
-            p.text('Bild ' + imageId, 10, 50);
+            p.text('Item ' + itemId, 10, 50);
 
-            // Load and display the image
-            const img = p.loadImage(`assets/bilder/bild${imageId}.jpg`, () => {
-                p.image(img, 10, 70, 380, 320);
-            });
+            // Beispielhafte p5.js-Zeichnung
+            p.fill(150, 0, 0);
+            p.rect(100, 100, 200, 200);
         };
     };
 
