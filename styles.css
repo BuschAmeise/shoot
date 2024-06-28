@@ -33,8 +33,10 @@ nav a:hover {
     width: 200px;
     height: 200px;
     margin: 10px;
-    background-size: cover;
-    background-position: center;
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
 }
 
